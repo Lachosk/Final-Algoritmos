@@ -1,7 +1,7 @@
 # Final algoritmos 2022 - 1
 ### Nombre y Codigo
 ```
-Andres Felipe Narvaez - A00 / Nicolas Orozco - A00362643
+Andres Felipe Narvaez - A00365456 / Nicolas Orozco - A00362643
 ```
 
 # Vite, Vitest, P5, TypeScript and ESLint Starter
