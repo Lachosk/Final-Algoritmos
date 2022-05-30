@@ -1,15 +1,24 @@
 /* eslint-disable no-param-reassign */
 import './style.css';
-import p5 from 'p5';
-import Pantalla from './Pantallas';
+import p5, { Image } from 'p5';
+import PantallaInicio from './PantallaInicio';
+
+const pantalla1 = new PantallaInicio(0,0,interface1);
+let interface1:Image;
+
 
 const sketch = (p: p5) => {
+  p.preload= () => {
+    interface1 = p.loadImage('../assests/Interfaz_Inciio.png')
+  }
+
   p.setup = () => {
-    p.createCanvas(500, 500);
+    p.createCanvas(1280, 720);
   };
 
   p.draw = () => {
     p.background(80);
+    pantalla1.show(p);
   };
 
   p.keyPressed = () => {
