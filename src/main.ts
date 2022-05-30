@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import './style.css';
 import p5 from 'p5';
+import Pantalla from './Pantallas';
 
 const sketch = (p: p5) => {
   p.setup = () => {
