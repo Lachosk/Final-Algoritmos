@@ -8,7 +8,7 @@ let interface1:Image;
 
 const sketch = (p: p5) => {
   p.preload= () => {
-    interface1 = p.loadImage('../assests/Interfaz_Inciio.png')
+    interface1 = p.loadImage('../Interfaces/Interfaz_Inciio.png')
   }
 
   p.setup = () => {
