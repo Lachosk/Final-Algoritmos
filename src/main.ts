@@ -7,6 +7,7 @@ import PantallaInicio from './PantallaInicio';
 import PantallaInstrucciones from './PantallaInstrucciones';
 import PantallaHistoria from './PantallaHistoria'
 import PantallaInstrucciones2 from './PantallaInstrucciones2';
+import Bullet from './Bullet';
 
 
 //Se crean variables para cada pantalla
@@ -14,12 +15,15 @@ let pantallaInicio: PantallaInicio;
 let pantallaInstrucciones: PantallaInstrucciones;
 let pantallaInstrucciones2: PantallaInstrucciones2;
 let pantallaHistoria: PantallaHistoria;
+let bullet: Bullet;
 
 //Se crean variables para cada imagen
 let pantallaInstruc: Image;
 let pantallaInstruc2: Image;
 let pantallaI: Image;
 let pantallaH: Image;
+let bala: Image;
+
 
 //Se define, mediante una variable, la pantalla inicial del programa
 let pantallas = 0;
@@ -32,6 +36,8 @@ const sketch = (p: p5) => {
     pantallaInstruc = p.loadImage('../Interfaces/Interfaz Instrucciones.png');
     pantallaInstruc2 = p.loadImage('../Interfaces/Interfaz Instrucciones 2.png')
     pantallaH = p.loadImage('../Interfaces/Interfa_Historia.png')
+
+    bala = p.loadImage('../assets/Bullet.png')
   }
 
   //Se crean instancias de las clases

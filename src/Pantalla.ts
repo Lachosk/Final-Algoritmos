@@ -1,8 +1,8 @@
 import p5, { Image } from 'p5';
 
 export default class Pantalla {
-  protected x: number = 0;
-  protected y: number = 0;
+  protected x: number;
+  protected y: number;
   protected interface1!: Image;
 
   constructor(x:number, y:number, interface1:Image) {
