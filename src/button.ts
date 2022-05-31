@@ -13,21 +13,15 @@ export default class Button {
     this.h = h
   }
 
-  click(p: p5) {
-    p.rect(this.x,this.y,this.w,this.h);
+  //Funcion en donde se crean cada boton desde la clase Button
+  mouseClicked(p:p5){
+   // p.rect(this.x,this.y,this.w,this.h);
     if (p.mouseIsPressed&&(p.mouseX > this.x && p.mouseY > this.y &&
-        p.mouseX < this.x + this.w && p.mouseY < this.y+this.h)) {
-      return true;
-    } else {
-      return false;
-
-    }
+      p.mouseX < this.x + this.w && p.mouseY < this.y+this.h)) {
+    return true;
+  } else {
+    return false;
   }
+  }
+
 }
-
-
-
-
-
-
-
