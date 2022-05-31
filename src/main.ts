@@ -43,7 +43,7 @@ const sketch = (p: p5) => {
     pantallaHistoria = new PantallaHistoria (0,0,pantallaH)
   };
 
-  //s
+  //Se crean los casos para cada pantalla
   p.draw = () => {
     switch (pantallas) {
       case 0:
