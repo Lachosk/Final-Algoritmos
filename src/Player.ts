@@ -22,4 +22,4 @@ export default class Bullet {
     this.bullet = [];
     this.playerImg = playerImg;
   }
-
+}
