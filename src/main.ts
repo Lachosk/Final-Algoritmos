@@ -54,7 +54,7 @@ const sketch = (p: p5) => {
     pantallaHistoria = new PantallaHistoria (0,0,pantallaH)
     pantallaJuego = new PantallaJuego(0,0,pantallaJ);
 
-    game = new Game();
+    //game = new Game();
   };
 
   //Se crean los casos para cada pantalla
