@@ -3,7 +3,6 @@ import './style.css';
 import p5, { Image } from 'p5';
 import PantallaInicio from './PantallaInicio';
 
-const pantalla1 = new PantallaInicio(0,0,interface1);
 let interface1:Image;
 
 
@@ -17,6 +16,8 @@ const sketch = (p: p5) => {
   };
 
   p.draw = () => {
+    const pantalla1 = new PantallaInicio(0,0,interface1);
+
     p.background(80);
     pantalla1.show(p);
   };
