@@ -1,25 +1,33 @@
 /* eslint-disable no-param-reassign */
+
 import './style.css';
 import p5, { Image } from 'p5';
 import PantallaInicio from './PantallaInicio';
 
-let interface1:Image;
+let pantallaInicio: PantallaInicio;
+let pantallaI:Image;
+let pantallas=0;
 
 
 const sketch = (p: p5) => {
+
   p.preload= () => {
-    interface1 = p.loadImage('../Interfaces/Interfaz_Inciio.png')
+    pantallaI = p.loadImage('../Interfaces/Interfaz_Inciio.png')
   }
 
   p.setup = () => {
     p.createCanvas(1280, 720);
+    pantallaInicio = new PantallaInicio(0,0,pantallaI);
   };
 
   p.draw = () => {
-    const pantalla1 = new PantallaInicio(0,0,interface1);
-
     p.background(80);
-    pantalla1.show(p);
+    switch(pantallas){
+      case 0:
+      pantallaInicio.show(p);
+        break;
+    }
+
   };
 
   p.keyPressed = () => {
