@@ -5,12 +5,5 @@ export default interface Pantalla {
    y: number;
    screenImg: Image;
 
-  //Se crea cada pantalla
-  /*constructor(x:number, y:number, screenImg:Image) {
-    this.x = x;
-    this.y = y;
-    this.screenImg = screenImg;
-  }*/
-
   show (p:p5): void
 }

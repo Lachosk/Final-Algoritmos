@@ -15,6 +15,7 @@ export default class PantallaInicio implements Pantalla {
   botonInstruc = new Button(530,483,249,77);
   botonHistoria = new Button(530,595,249,77);
   botonprueba = new Button(400,595,249,77);
+  botonJugar= new Button(530,371,249,77);
 
   cases = 0;
 
@@ -23,12 +24,9 @@ export default class PantallaInicio implements Pantalla {
    p.image(this.screenImg, this.x, this.y);
 
 
-
    if(this.botonprueba.mouseClicked(p)){
     console.log("🐴");
     }
-
-
 
    if(this.botonInstruc.mouseClicked(p)){
     this.cases = 1;
@@ -37,7 +35,10 @@ export default class PantallaInicio implements Pantalla {
     if(this.botonHistoria.mouseClicked(p)){
       this.cases= 2;
     }
+
+    if(this.botonJugar.mouseClicked(p)){
+      this.cases= 4;
+    }
+
   }
-
-
 }

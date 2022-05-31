@@ -7,7 +7,9 @@ import PantallaInicio from './PantallaInicio';
 import PantallaInstrucciones from './PantallaInstrucciones';
 import PantallaHistoria from './PantallaHistoria'
 import PantallaInstrucciones2 from './PantallaInstrucciones2';
+import PantallaJuego from './PantallaJuego';
 import Bullet from './Bullet';
+import Game from './Game'
 
 
 //Se crean variables para cada pantalla
@@ -15,6 +17,7 @@ let pantallaInicio: PantallaInicio;
 let pantallaInstrucciones: PantallaInstrucciones;
 let pantallaInstrucciones2: PantallaInstrucciones2;
 let pantallaHistoria: PantallaHistoria;
+let pantallaJuego: PantallaJuego;
 let bullet: Bullet;
 
 //Se crean variables para cada imagen
@@ -22,6 +25,7 @@ let pantallaInstruc: Image;
 let pantallaInstruc2: Image;
 let pantallaI: Image;
 let pantallaH: Image;
+let pantallaJ: Image;
 let bala: Image;
 
 
@@ -36,6 +40,7 @@ const sketch = (p: p5) => {
     pantallaInstruc = p.loadImage('../Interfaces/Interfaz Instrucciones.png');
     pantallaInstruc2 = p.loadImage('../Interfaces/Interfaz Instrucciones 2.png')
     pantallaH = p.loadImage('../Interfaces/Interfa_Historia.png')
+    pantallaJ = p.loadImage('../Interfaces/Interfaz juego1.png')
 
     bala = p.loadImage('../assests/Bala.png')
   }
@@ -47,6 +52,9 @@ const sketch = (p: p5) => {
     pantallaInstrucciones = new PantallaInstrucciones(0, 0, pantallaInstruc);
     pantallaInstrucciones2 = new PantallaInstrucciones2(0,0,pantallaInstruc2)
     pantallaHistoria = new PantallaHistoria (0,0,pantallaH)
+    pantallaJuego = new PantallaJuego(0,0,pantallaJ);
+
+    game = new Game();
   };
 
   //Se crean los casos para cada pantalla
@@ -68,6 +76,10 @@ const sketch = (p: p5) => {
           pantallaInstrucciones2.show(p);
           pantallas = pantallaInstrucciones2.cases3;
           break;
+        case 4:
+          pantallaJuego.show(p);
+          pantallas = pantallaJuego.cases4;
+        break;
       default:
         break;
     }
