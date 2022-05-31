@@ -1,10 +1,15 @@
 import p5, { Image } from 'p5';
 import Pantalla from './Pantalla';
 import Button from './button';
-export default class PantallaInicio extends Pantalla {
+export default class PantallaInicio implements Pantalla {
+  x: number;
+  y: number;
+  screenImg: p5.Image;
 
-  constructor(x:number, y:number, interface1:Image) {
-    super(x, y, interface1);
+  constructor(x:number, y:number, screenImg:Image) {
+    this.x=x;
+    this.y=y;
+    this.screenImg=screenImg;
   }
 
   botonInstruc = new Button(530,483,249,77);
@@ -15,7 +20,7 @@ export default class PantallaInicio extends Pantalla {
 
   show(p:p5) {
    this.cases= 0;
-   p.image(this.interface1, this.x, this.y);
+   p.image(this.screenImg, this.x, this.y);
 
 
 

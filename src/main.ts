@@ -37,7 +37,7 @@ const sketch = (p: p5) => {
     pantallaInstruc2 = p.loadImage('../Interfaces/Interfaz Instrucciones 2.png')
     pantallaH = p.loadImage('../Interfaces/Interfa_Historia.png')
 
-    bala = p.loadImage('../assets/Bullet.png')
+    bala = p.loadImage('../assests/Bala.png')
   }
 
   //Se crean instancias de las clases
